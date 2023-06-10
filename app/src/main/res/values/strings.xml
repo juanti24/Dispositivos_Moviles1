@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">DispositivosMoviles</string>
+    <string name="nombre_app">Pedidos Online</string>
+    <string name="bienvenida">¡Hola! Es bueno verte nuevamente</string>
+    <string name="ingreso_boton">Ingresar</string>
+    <string name="mensaje_redes">O conéctese usando las redes sociales</string>
+    <string name="mensaje_olvido_contrasenia">¿Olvido su contraseha?</string>
+    <string name="text_label_1">ETIQUETA 1</string>
+    <string name="text_label_2">ETIQUETA 2</string>
+    <string name="text_label_3">ETIQUETA 3</string>
+    <string name="title_fragment">First Fragment</string>
+</resources>
