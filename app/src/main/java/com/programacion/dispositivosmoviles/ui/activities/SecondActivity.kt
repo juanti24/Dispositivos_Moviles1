@@ -8,6 +8,8 @@ import com.google.android.material.snackbar.Snackbar
 import com.programacion.dispositivosmoviles.R
 import com.programacion.dispositivosmoviles.databinding.ActivitySecondBinding
 import com.programacion.dispositivosmoviles.ui.fragments.FirstFragment
+import com.programacion.dispositivosmoviles.ui.fragments.SecondFragment
+import com.programacion.dispositivosmoviles.ui.fragments.ThirdFragment
 
 class SecondActivity : AppCompatActivity() {
     private lateinit var binding: ActivitySecondBinding
@@ -42,31 +44,20 @@ class SecondActivity : AppCompatActivity() {
 
                 R.id.item_2 -> {
 
-                    var suma = 0
-                    for (i in listOf(8, 10, 14)) {
-                        suma += i
-                    }
-                    Snackbar.make(
-                        binding.txtWelcome,
-                        "La suma es ${suma}",
-                        Snackbar.LENGTH_LONG
-                    )
-                        .setBackgroundTint(getColor(R.color.snackbarColor))
-                        .show()
+                    val frag = SecondFragment()
+                    val transacction = supportFragmentManager.beginTransaction()
+                    transacction.replace(binding.frmContainer.id, frag)
+                    transacction.addToBackStack(null)
+                    transacction.commit()
                     true
                 }
 
                 R.id.item_3 -> {
-                    var suma = 0
-                    for (i in listOf(10, 16, 23)) {
-                        suma += i
-                    }
-                    Snackbar.make(
-                        binding.txtWelcome,
-                        "La suma es ${suma}",
-                        Snackbar.LENGTH_LONG
-                    ).setBackgroundTint(getColor(R.color.snackbarColor))
-                        .show()
+                    val frag = ThirdFragment()
+                    val transacction = supportFragmentManager.beginTransaction()
+                    transacction.replace(binding.frmContainer.id, frag)
+                    transacction.addToBackStack(null)
+                    transacction.commit()
                     true
                 }
 
