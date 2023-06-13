@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Dispositivos Moviles</string>
+    <string name="app_name_pantalla">Fast and Delicious Food</string>
+    <string name="app_binding_name">Gaming Services</string>
+    <string name="buttonSearch">Search</string>
+    <string name="pedidosOnline">Pedidos Online</string>
+    <string name="mensaje_ejPractico">¡Hola! Es bueno verte nuevamente</string>
+    <string name="correoEjemplo">example@email.com</string>
+    <string name="txt_fragment">Primer Fragmento</string>
+    <string name="txt_fragment2">Segundo Fragmento</string>
+    <string name="txt_fragment3">Tercer Fragmento</string>
+</resources>
