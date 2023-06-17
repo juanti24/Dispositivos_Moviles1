@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Dispositivos Moviles</string>
+    <string name="app_name_pantalla">Fast and Delicious Food</string>
+    <string name="app_binding_name">Gaming Services</string>
+    <string name="buttonSearch">Search</string>
+    <string name="pedidosOnline">Pedidos Online</string>
+    <string name="mensaje_ejPractico">¡Hola! Es bueno verte nuevamente</string>
+    <string name="correoEjemplo">example@email.com</string>
+    <string name="txt_fragment">Primer Fragmento</string>
+    <string name="txt_fragment2">Segundo Fragmento</string>
+    <string name="txt_fragment3">Tercer Fragmento</string>
+
+    <string name="img_captian_america">https://comicvine.gamespot.com/a/uploads/scale_small/12/124259/8459983-rco031_1650495781.jpg</string>
+    <string name="img_thor">https://comicvine.gamespot.com/a/uploads/scale_small/12/124259/8926324-large-2680196.jpg</string>
+    <string name="img_iceman">https://comicvine.gamespot.com/a/uploads/scale_small/1/14487/8582303-6562c2d0-2069-4a20-af02-4861621c0b9a.jpeg</string>
+    <string name="img_deadpool">https://comicvine.gamespot.com/a/uploads/scale_small/12/124259/8926324-large-2680196.jpg</string>
+    <string name="img_professorx">https://comicvine.gamespot.com/a/uploads/scale_small/10/100647/7261595-hox1pichelli.jpg</string>
+</resources>

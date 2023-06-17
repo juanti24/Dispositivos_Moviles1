@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="low_gray">#C1C1C1</color>
+    <color name="amarillo">#F4D537</color>
+    <color name="vanilla">#D4E09B</color>
+    <color name="azul">#6B7FDA</color>
+    <color name="rojo_pasion">#C11313</color>
+    <color name="azul_marino">#3F51B5</color>
+    <color name="verde_marino">#4FEA95</color>
+    <color name="botton_accept">#934BD1</color>
+    <color name="azul_oscuro">#0C0A45</color>
+    <color name="naranja">#FF9800</color>
+    <color name="search_bg">#3ED1D1D5</color>
+    <color name="title_binding">#FF9800</color>
+    <color name="fragment1">#8C1C13</color>
+    <color name="fragment2">#BF4342</color>
+    <color name="fragment3">#E7D7C1</color>
+    <color name="naranja1">#FFC15E</color>
+    <color name="naranja2">#F7B05B</color>
+    <color name="naranja3">#F7934C</color>
+    <color name="naranja4">#CC5803</color>
+    <color name="azul1">#98B9F2</color>
+    <color name="azul2">#6F9CEB</color>
+    <color name="azul3">#306BAC</color>
+    <color name="azul4">#141B41</color>
+    <color name="verde1">#96E072</color>
+    <color name="verde2">#3DA35D</color>
+    <color name="verde3">#3E8914</color>
+    <color name="verde4">#134611</color>
+</resources>
