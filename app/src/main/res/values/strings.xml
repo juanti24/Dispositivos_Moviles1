@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Dispositivos Moviles</string>
+    <string name="app_name_pantalla">Fast and Delicious Food</string>
+    <string name="app_binding_name">Gaming Services</string>
+    <string name="buttonSearch">Search</string>
+    <string name="pedidosOnline">Pedidos Online</string>
+    <string name="mensaje_ejPractico">¡Hola! Es bueno verte nuevamente</string>
+    <string name="correoEjemplo">example@email.com</string>
+    <string name="txt_fragment">Primer Fragmento</string>
+    <string name="txt_fragment2">Segundo Fragmento</string>
+    <string name="txt_fragment3">Tercer Fragmento</string>
+    <string name="img_spiderman">https://comicvine.gamespot.com/a/uploads/square_medium/11170/111705043/8843794-neverready.jpg</string>
+    <string name="img_daredevil">https://comicvine.gamespot.com/a/uploads/scale_small/11118/111187046/7397359-0398898002-EQH1ysWWsAA7QLf</string>
+    <string name="img_punisher">https://comicvine.gamespot.com/a/uploads/square_medium/14/147237/7927302-rco011_1583587732.jpg</string>
+    <string name="img_deadpool">https://comicvine.gamespot.com/a/uploads/square_medium/11131/111317321/5939443-5.jpg</string>
+    <string name="img_mrfantastic">https://comicvine.gamespot.com/a/uploads/scale_small/11112/111123579/7316596-fantastic_four_vol_6_1_mr._fantastic_variant_textless.jpg</string>
+</resources>
