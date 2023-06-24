@@ -29,4 +29,6 @@
     <color name="verde2">#3DA35D</color>
     <color name="verde3">#3E8914</color>
     <color name="verde4">#134611</color>
+    <color name="bg_mv1">#004777</color>
+    <color name="bg_mv2">#FF2E00</color>
 </resources>
