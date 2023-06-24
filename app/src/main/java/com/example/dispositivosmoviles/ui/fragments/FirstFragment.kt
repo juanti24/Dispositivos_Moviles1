@@ -2,6 +2,7 @@ package com.example.dispositivosmoviles.ui.fragments
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -9,16 +10,21 @@ import android.view.ViewGroup
 import android.widget.Adapter
 import android.widget.ArrayAdapter
 import android.widget.SimpleAdapter
+import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView.LayoutManager
 import com.example.dispositivosmoviles.R
+import com.example.dispositivosmoviles.data.marvel.MarvelChars
 import com.example.dispositivosmoviles.databinding.ActivityEjercicioPracticoBinding
 import com.example.dispositivosmoviles.databinding.FragmentFirstBinding
+import com.example.dispositivosmoviles.logic.jikan_logic.JikanAnimeLogic
 import com.example.dispositivosmoviles.logic.list.ListItems
-import com.example.dispositivosmoviles.logic.list.MarvelChars
 import com.example.dispositivosmoviles.ui.activities.DetailsMarvelItem
 import com.example.dispositivosmoviles.ui.activities.EjercicioPracticoActivity
 import com.example.dispositivosmoviles.ui.adapters.MarvelAdapter
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -86,20 +92,31 @@ class FirstFragment : Fragment() {
     // Serializacion -> Utiliza objetos JSON
     // Parcelables   -> Son mas rapidos pero su implementacion es compleja, afortunadamente existen plugins que nos ayudan
 
-    fun chargeDataRv(){
-        val rvAdapter = MarvelAdapter(
-            ListItems().returnMarvelList()
-            //, { sendMarvelItem(it) }
-        ) { sendMarvelItem(it) }
+    fun chargeDataRv() {
 
-        val rvMarvel = binding.rvMarvelChars
-        with(rvMarvel) {
-            this.adapter = rvAdapter
-            this.layoutManager = LinearLayoutManager(
-                requireActivity(),
-                LinearLayoutManager.VERTICAL,
-                false
-            )
+        lifecycleScope.launch(Dispatchers.IO) {
+            val x = JikanAnimeLogic().getAllAnimes()
+            val rvAdapter = MarvelAdapter(
+                //ListItems().returnMarvelList()
+                x
+                //, { sendMarvelItem(it) }
+            ) { sendMarvelItem(it) }
+            Log.d("uce", x.size.toString())
+
+            withContext(Dispatchers.Main) {
+                with(binding.rvMarvelChars) {
+                    this.adapter = rvAdapter
+                    this.layoutManager = LinearLayoutManager(
+                        requireActivity(),
+                        LinearLayoutManager.VERTICAL,
+                        false
+                    )
+                }
+            }
+
+
         }
+
+
     }
 }

@@ -5,8 +5,8 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.dispositivosmoviles.R
+import com.example.dispositivosmoviles.data.marvel.MarvelChars
 import com.example.dispositivosmoviles.databinding.MarvelCharactersBinding
-import com.example.dispositivosmoviles.logic.list.MarvelChars
 import com.squareup.picasso.Picasso
 
 class MarvelAdapter(
