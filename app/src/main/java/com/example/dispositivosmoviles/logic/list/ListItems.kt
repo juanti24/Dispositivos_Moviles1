@@ -1,10 +1,6 @@
 package com.example.dispositivosmoviles.logic.list
 
-import android.os.Parcelable
-import com.example.dispositivosmoviles.R
 import com.example.dispositivosmoviles.data.marvel.MarvelChars
-import kotlinx.parcelize.Parcelize
-
 
 
 class ListItems {

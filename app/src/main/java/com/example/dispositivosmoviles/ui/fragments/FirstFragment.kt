@@ -7,20 +7,15 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Adapter
 import android.widget.ArrayAdapter
-import android.widget.SimpleAdapter
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView.LayoutManager
 import com.example.dispositivosmoviles.R
 import com.example.dispositivosmoviles.data.marvel.MarvelChars
-import com.example.dispositivosmoviles.databinding.ActivityEjercicioPracticoBinding
 import com.example.dispositivosmoviles.databinding.FragmentFirstBinding
 import com.example.dispositivosmoviles.logic.jikan_logic.JikanAnimeLogic
-import com.example.dispositivosmoviles.logic.list.ListItems
+import com.example.dispositivosmoviles.logic.marvel_logic.MarvelLogic
 import com.example.dispositivosmoviles.ui.activities.DetailsMarvelItem
-import com.example.dispositivosmoviles.ui.activities.EjercicioPracticoActivity
 import com.example.dispositivosmoviles.ui.adapters.MarvelAdapter
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -95,7 +90,8 @@ class FirstFragment : Fragment() {
     fun chargeDataRv() {
 
         lifecycleScope.launch(Dispatchers.IO) {
-            val x = JikanAnimeLogic().getAllAnimes()
+            //val x = JikanAnimeLogic().getAllAnimes()
+            val x = MarvelLogic().getMarvelChars("Cap", 5)
             val rvAdapter = MarvelAdapter(
                 //ListItems().returnMarvelList()
                 x
