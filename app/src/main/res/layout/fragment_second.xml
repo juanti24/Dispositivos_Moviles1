@@ -12,7 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="280dp"
         android:layout_margin="35dp"
-        android:backgroundTint="@color/verde1"
+        android:backgroundTint="@color/azul1"
         android:elevation="10dp"
         app:cardCornerRadius="12dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -26,7 +26,7 @@
             android:layout_marginTop="20dp"
             android:layout_marginHorizontal="10dp"
 
-            android:src="@drawable/f_natu" />
+            android:src="@drawable/marvel" />
 
         <TextView
             android:id="@+id/textView12"

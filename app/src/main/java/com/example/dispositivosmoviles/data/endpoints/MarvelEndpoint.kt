@@ -8,7 +8,7 @@ import retrofit2.http.Query
 interface MarvelEndpoint {
 
     @GET("characters")
-    fun getCharactersThatStartWith(
+    suspend fun getCharactersThatStartWith(
         @Query("nameStartsWith") name: String,
         @Query("limit") limit: Int,
         @Query("ts") ts: String = "uce",

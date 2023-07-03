@@ -10,7 +10,7 @@ import com.example.dispositivosmoviles.databinding.MarvelCharactersBinding
 import com.squareup.picasso.Picasso
 
 class MarvelAdapter(
-    private val items: List<MarvelChars>,
+    private var items: List<MarvelChars>,
     // En Java es Void, en Kotlin es Unit
     private var fnClick: (MarvelChars) -> Unit
 ) :
@@ -60,5 +60,10 @@ class MarvelAdapter(
     }
 
     override fun getItemCount(): Int = items.size
+
+    fun updateListItem(newItems: List<MarvelChars>){
+        this.items = this.items.plus(newItems)
+        notifyDataSetChanged()
+    }
 
 }

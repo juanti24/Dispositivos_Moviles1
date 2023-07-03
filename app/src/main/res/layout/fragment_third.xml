@@ -12,7 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="280dp"
         android:layout_margin="35dp"
-        android:backgroundTint="@color/azul1"
+        android:backgroundTint="@color/rojo_pasion"
         android:elevation="10dp"
         app:cardCornerRadius="12dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -24,9 +24,9 @@
             android:layout_width="match_parent"
             android:layout_height="175dp"
             android:layout_marginStart="10dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="19dp"
             android:layout_marginEnd="10dp"
-            android:src="@drawable/f_moon" />
+            android:src="@drawable/marvel" />
 
         <TextView
             android:id="@+id/textView12"
