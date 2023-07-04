@@ -5,7 +5,7 @@
     android:id="@+id/frameLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/verde_marino"
+    android:background="@color/azul_marino"
     tools:context=".ui.fragments.FirstFragment">
 
 
@@ -14,7 +14,7 @@
         android:layout_width="match_parent"
         android:layout_height="280dp"
         android:layout_margin="35dp"
-        android:backgroundTint="@color/verde1"
+        android:backgroundTint="@color/azul1"
         android:elevation="10dp"
         app:cardCornerRadius="12dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -46,10 +46,23 @@
         android:layout_width="match_parent"
         android:layout_height="345dp"
         android:layout_margin="15dp"
+        android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cardView">
+
+        <EditText
+            android:id="@+id/txtFilter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:imeOptions="actionDone"/>
+
+
 
         <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
             android:id="@+id/rvSwipe"

@@ -5,14 +5,14 @@
     android:id="@+id/frameLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/rojo_pasion"
+    android:background="@color/verde_marino"
     tools:context=".ui.fragments.ThirdFragment">
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="280dp"
         android:layout_margin="35dp"
-        android:backgroundTint="@color/rojo_pasion"
+        android:backgroundTint="@color/verde1"
         android:elevation="10dp"
         app:cardCornerRadius="12dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -24,7 +24,7 @@
             android:layout_width="match_parent"
             android:layout_height="175dp"
             android:layout_marginStart="10dp"
-            android:layout_marginTop="19dp"
+            android:layout_marginTop="20dp"
             android:layout_marginEnd="10dp"
             android:src="@drawable/marvel" />
 

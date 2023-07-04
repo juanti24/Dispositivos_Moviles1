@@ -8,6 +8,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ArrayAdapter
+import androidx.core.widget.addTextChangedListener
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -39,6 +40,8 @@ class FirstFragment : Fragment() {
 
     private lateinit var rvAdapter: MarvelAdapter
 
+    private lateinit var marvelCharItems: MutableList<MarvelChars>
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -57,13 +60,13 @@ class FirstFragment : Fragment() {
         super.onStart()
 
         val names = arrayListOf<String>(
-            "Ariel",
-            "Michael",
+            "Juan",
+            "David",
+            "Xavier",
             "Erick",
-            "Willian",
-            "Edwin",
-            "Santiago",
-            "Layla"
+            "Dark",
+            "Pepito",
+            "Jaime"
         )
 
         val adapter = ArrayAdapter<String>(
@@ -85,7 +88,6 @@ class FirstFragment : Fragment() {
                     super.onScrolled(recyclerView, dx, dy)
 
                     if (dy > 0) {
-
                         val v = lmanager.childCount
                         val p = lmanager.findFirstVisibleItemPosition()
                         val t = lmanager.itemCount
@@ -95,12 +97,12 @@ class FirstFragment : Fragment() {
                         // t es el total de items
                         if ((v + p) >= t) {
                             lifecycleScope.launch(Dispatchers.IO) {
-                                val newItems = JikanAnimeLogic().getAllAnimes()
-                                /*val newItems = MarvelLogic().getMarvelChars(
-                                    name = "spi",
-                                    limit = 20
+                                //val newItems = JikanAnimeLogic().getAllAnimes()
+                                val newItems = MarvelLogic().getMarvelChars(
+                                    name = "sta",
+                                    limit = 7
                                 )
-                                */
+
                                 withContext(Dispatchers.Main) {
                                     rvAdapter.updateListItem(newItems)
                                 }
@@ -110,6 +112,13 @@ class FirstFragment : Fragment() {
                 }
             }
         )
+
+        binding.txtFilter.addTextChangedListener { filteredText ->
+            val newItems = marvelCharItems.filter { items ->
+                items.nombre.contains(filteredText.toString())
+            }
+            rvAdapter.replaceListAdapter(newItems)
+        }
 
     }
 
@@ -124,7 +133,7 @@ class FirstFragment : Fragment() {
     }
 
     // Serializacion: proceso de pasar de un objeto a un string para poder enviarlo por medio de la web
-    // Parceables: Mucho mas eficiente que la serializacion, pues ejecutan de mejor manera el mismo proceso
+    // Parcelables:   Mucho mas eficiente que la serializacion, pues ejecutan de mejor manera el mismo proceso
     // Serializacion -> Utiliza objetos JSON
     // Parcelables   -> Son mas rapidos pero su implementacion es compleja, afortunadamente existen plugins que nos ayudan
 
@@ -147,9 +156,11 @@ class FirstFragment : Fragment() {
 
         lifecycleScope.launch(Dispatchers.IO) {
 
+            marvelCharItems = MarvelLogic().getMarvelChars(search, 20)
+
             rvAdapter = MarvelAdapter(
-                JikanAnimeLogic().getAllAnimes()
-                //MarvelLogic().getMarvelChars(search, 20)
+                //JikanAnimeLogic().getAllAnimes()
+                marvelCharItems
             ) { sendMarvelItem(it) }
 
             withContext(Dispatchers.Main) {

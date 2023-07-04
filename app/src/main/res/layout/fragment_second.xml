@@ -5,14 +5,14 @@
     android:id="@+id/frameLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/azul_marino"
+    android:background="@color/rojo_pasion"
     tools:context=".ui.fragments.SecondFragment">
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="280dp"
         android:layout_margin="35dp"
-        android:backgroundTint="@color/azul1"
+        android:backgroundTint="@color/rojo_pasion"
         android:elevation="10dp"
         app:cardCornerRadius="12dp"
         app:layout_constraintBottom_toBottomOf="parent"
