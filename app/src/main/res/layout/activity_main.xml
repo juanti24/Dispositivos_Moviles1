@@ -4,170 +4,66 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
-
+    android:orientation="vertical"
+    android:background="@color/background_dm"
+    tools:context=".ui.activities.MainActivity">
 
     <TextView
-        android:id="@+id/nombreApp"
+        android:id="@+id/textView1"
         style="@style/textTitle"
-        android:layout_width="178dp"
-        android:layout_height="48dp"
-        android:layout_marginStart="50dp"
-        android:layout_marginTop="180dp"
-        android:gravity="left"
-        android:longClickable="true"
-        android:text="@string/nombre_app"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+
+        android:gravity="bottom"
+        android:text="@string/name_value"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/mensajeBienvenida"
-        style="@style/mensaje"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="50dp"
-        android:layout_marginTop="4dp"
-        android:text="@string/bienvenida"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/nombreApp" />
-
-    <TextView
-        android:id="@+id/mensajeRedes"
-        style="@style/mensaje"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
-        android:text="@string/mensaje_redes"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnIngreso" />
-
-    <TextView
-        android:id="@+id/mensaje_recuperar_contrasenia"
-        style="@style/mensaje"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="50dp"
-        android:layout_marginTop="20dp"
-        android:text="@string/mensaje_olvido_contrasenia"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnLoginTwitter" />
-
-    <TextView
-        android:id="@+id/textCorreo"
-        style="@style/etiquetas"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="50dp"
-        android:layout_marginTop="28dp"
-        android:text="Correo"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/mensajeBienvenida" />
-
-    <TextView
-        android:id="@+id/labelContrasenia"
-        style="@style/etiquetas"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="50dp"
-        android:layout_marginTop="380dp"
-        android:text="Contraseña"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/labelRegistro"
-        style="@style/etiquetas"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="50dp"
-        android:text="Registrese"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnLoginFacebook" />
-
-    <Button
-        android:id="@+id/btnLoginFacebook"
-        style="@style/ButtonFacebook"
-        android:layout_width="140dp"
-        android:layout_height="60dp"
-        android:layout_marginStart="216dp"
-        android:layout_marginTop="15dp"
-        android:layout_marginEnd="50dp"
-        android:text="Facebook"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/mensajeRedes"
-        tools:ignore="MissingConstraints" />
-
-    <Button
-        android:id="@+id/btnLoginTwitter"
-        style="@style/ButtonTwitter"
-        android:layout_width="140dp"
-        android:layout_height="60dp"
-        android:layout_marginStart="50dp"
-        android:layout_marginTop="15dp"
-        android:text="Twitter"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/mensajeRedes"
-        tools:ignore="MissingConstraints" />
-
-
-    <Button
-        android:id="@+id/btnIngreso"
-        style="@style/ButtonIngreso"
-        android:layout_width="300dp"
-        android:layout_height="48dp"
-        android:layout_marginTop="25dp"
-        android:gravity="center"
-        android:text="@string/ingreso_boton"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/pass"
-        tools:ignore="MissingConstraints" />
-
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:layout_marginTop="15dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/logo_edi" />
+        tools:text="Fast and
+        Delicius Food" />
+
+    <Button
+        android:id="@+id/btn_login"
+        style="@style/ButtonCancel"
+        android:layout_width="210dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="124dp"
+        android:layout_marginBottom="268dp"
+        android:text="Ingresar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
-        android:id="@+id/name"
-        android:layout_width="310dp"
-        android:layout_height="48dp"
-        android:layout_marginStart="50dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="50dp"
-        android:hint="example@email.com"
-        android:backgroundTint="@color/light_grey"
-        android:textColorHint="@color/black"
+        android:id="@+id/txt_name"
+        android:layout_width="204dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="112dp"
+        android:layout_marginTop="60dp"
+        android:background="@color/text_bg"
+        android:padding="8dp"
+        android:hint="User name"
+
+        android:textColor="@color/black"
         android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textCorreo" />
+        app:layout_constraintTop_toBottomOf="@+id/textView1" />
 
     <EditText
-        android:id="@+id/pass"
-        android:layout_width="310dp"
-        android:layout_height="48dp"
-        android:layout_marginStart="50dp"
-        android:layout_marginTop="10dp"
-        android:backgroundTint="@color/light_grey"
-        android:hint="* * * * * * * * * * *"
-        android:textColorHint="@color/black"
+        android:id="@+id/txt_pass"
+        android:layout_width="204dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="112dp"
+        android:layout_marginTop="60dp"
+        android:background="@color/text_bg"
+        android:padding="8dp"
+        android:hint="Password"
+        android:textColor="@color/black"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/labelContrasenia" />
+        app:layout_constraintTop_toBottomOf="@+id/txt_name" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
