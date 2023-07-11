@@ -6,7 +6,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ArrayAdapter
-import androidx.core.widget.addTextChangedListener
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.GridLayoutManager
@@ -25,7 +24,7 @@ import kotlinx.coroutines.withContext
 
 class FirstFragment : Fragment() {
 
-    private lateinit var binding : FragmentFirstBinding
+    private lateinit var binding: FragmentFirstBinding
 
     private lateinit var lManager: LinearLayoutManager
 
@@ -45,7 +44,8 @@ class FirstFragment : Fragment() {
 
 
         binding = FragmentFirstBinding.inflate(
-            layoutInflater, container, false)
+            layoutInflater, container, false
+        )
 
         //da la disposicion de orientacion
         //sabe cuantos elementos han pasado
@@ -55,7 +55,7 @@ class FirstFragment : Fragment() {
             false
         )
 
-        gManager = GridLayoutManager(requireActivity(),2)
+        gManager = GridLayoutManager(requireActivity(), 2)
 
         // Inflate the layout for this fragment
         return binding.root
@@ -72,15 +72,15 @@ class FirstFragment : Fragment() {
             names
         )
 
-        binding.spinner.adapter = adapter
+//        binding.spinner.adapter = adapter
         //binding.listView.adapter = adapter
 
-        chargeDataRV()
+        chargeDataRVDB()
 
         binding.rvSwipe.setOnRefreshListener {
-            chargeDataRV()
+            chargeDataRVDB()
             binding.rvSwipe.isRefreshing = false
-            gManager.scrollToPositionWithOffset(5,20)
+            gManager.scrollToPositionWithOffset(5, 20)
         }
 
         binding.rvMarvelChars.addOnScrollListener(
@@ -100,7 +100,7 @@ class FirstFragment : Fragment() {
                         if ((v + p) >= t) {
                             lifecycleScope.launch(Dispatchers.IO) {
                                 //val newItems = JikanAnimeLogic().getAllAnimes()
-                                val newItems = MarvelLogic().getAllMarvelChars(0,99)
+                                val newItems = MarvelLogic().getAllMarvelChars(0, 99)
 
                                 withContext(Dispatchers.Main) {
                                     rvAdapter.updateListItem(newItems)
@@ -113,30 +113,30 @@ class FirstFragment : Fragment() {
         )
 
         //evento para filtrar la informaicon
-        binding.txtFilter.addTextChangedListener {filteredText ->
-            //devuelve una lista
-            val newItems = marvelCharsItems.filter { items ->
-                items.name.lowercase().contains(filteredText.toString().lowercase())
-            }
-            rvAdapter.replaceListAdapter(newItems)
-        }
+//        binding.txtFilter.addTextChangedListener {filteredText ->
+//            //devuelve una lista
+//            val newItems = marvelCharsItems.filter { items ->
+//                items.name.lowercase().contains(filteredText.toString().lowercase())
+//            }
+//            rvAdapter.replaceListAdapter(newItems)
+//        }
 
     }
 
     //cambiar de activity desde un fragment
     //esta funcion lleva contenido o informacion
-    fun sendMarvelItem(item: MarvelChars){
+    fun sendMarvelItem(item: MarvelChars) {
         val i = Intent(requireActivity(), DatailsMarvelItem::class.java)
         i.putExtra("name", item)
         startActivity(i)
     }
 
-    fun corrotine(){
-        lifecycleScope.launch(Dispatchers.Main){
+    fun corrotine() {
+        lifecycleScope.launch(Dispatchers.Main) {
 
             var name = "Kevin"
 
-            name = withContext(Dispatchers.IO){
+            name = withContext(Dispatchers.IO) {
                 //hacer un cambio y retornar solo se puede con uno a la vez
                 name = "Paul"
                 return@withContext name
@@ -147,26 +147,56 @@ class FirstFragment : Fragment() {
     }
 
     //cambios
-    fun chargeDataRV(){
+    fun chargeDataRVAPI() {
 
         lifecycleScope.launch(Dispatchers.Main) {
 
-            marvelCharsItems = withContext(Dispatchers.IO){
-                    return@withContext (MarvelLogic().getAllMarvelChars(0,99))
-                }
+            marvelCharsItems = withContext(Dispatchers.IO) {
+                return@withContext (MarvelLogic().getAllMarvelChars(0, 99))
+            }
 
             rvAdapter = MarvelAdapter(
                 marvelCharsItems,
-                fnClick = { sendMarvelItem(it)}
+                fnClick = { sendMarvelItem(it) }
             )
 
-            binding.rvMarvelChars.apply{
+            binding.rvMarvelChars.apply {
                 this.adapter = rvAdapter
                 this.layoutManager = gManager
             }
         }
     }
 
+    fun chargeDataRVDB() {
+
+        lifecycleScope.launch(Dispatchers.Main) {
+
+            marvelCharsItems = withContext(Dispatchers.IO) {
+
+                var marvelCharsItems = MarvelLogic()
+                    .getAllMarvelCharDb()
+                    .toMutableList()
+
+                if (marvelCharsItems.isEmpty()) {
+                    marvelCharsItems = (MarvelLogic().getAllMarvelChars
+                        (0, 99))
+                    MarvelLogic().insertMarvelCharstoDB(marvelCharsItems)
+                }
+                return@withContext marvelCharsItems
+
+            }
+
+            rvAdapter = MarvelAdapter(
+                marvelCharsItems,
+                fnClick = { sendMarvelItem(it) }
+            )
+
+            binding.rvMarvelChars.apply {
+                this.adapter = rvAdapter
+                this.layoutManager = gManager
+            }
+        }
+    }
 
 
 }

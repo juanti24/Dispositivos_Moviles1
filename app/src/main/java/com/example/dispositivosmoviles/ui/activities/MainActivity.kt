@@ -3,9 +3,6 @@ package com.example.dispositivosmoviles.ui.activities
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Button
-import android.widget.TextView
-import android.widget.Toast
 import com.example.dispositivosmoviles.databinding.ActivityMainBinding
 import com.example.dispositivosmoviles.logic.validator.LoginValidator
 import com.google.android.material.snackbar.Snackbar
@@ -32,6 +29,7 @@ class MainActivity : AppCompatActivity() {
     override fun onStart() {
         super.onStart()
         initClass()
+
     }
 
     override fun onDestroy() {

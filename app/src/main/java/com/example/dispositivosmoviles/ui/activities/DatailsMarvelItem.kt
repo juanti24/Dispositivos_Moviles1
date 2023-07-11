@@ -14,12 +14,11 @@ class DatailsMarvelItem : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_datails_marvel_item)
+
         binding = ActivityDatailsMarvelItemBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
-
     }
-
 
     override fun onStart() {
         super.onStart()
@@ -33,7 +32,8 @@ class DatailsMarvelItem : AppCompatActivity() {
 
         val item = intent.getParcelableExtra<MarvelChars>("name")
 
-        if (item != null){
+        if(item != null){
+
             binding.txtMarvel.text = item.name
             Picasso.get().load(item.image).into(binding.imageMarvel)
             binding.txtComic.text = item.comic

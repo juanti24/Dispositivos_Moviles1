@@ -65,6 +65,13 @@ class PrincipalActivity : AppCompatActivity() {
                 R.id.inicio -> {
                     //instanciar fragment
 
+                    FragmentsManager().replaceFragment(
+                        supportFragmentManager,
+                        binding.frmContainer.id,
+                        FirstFragment()
+                    )
+
+
                     true
                 }
                 R.id.favoritos -> {
