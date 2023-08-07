@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@android:color/white">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="25dp"
+        app:cardElevation="10dp"
+        app:cardCornerRadius="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="@android:color/black">
+
+            <ImageView
+                android:id="@+id/imgMarvel"
+                android:layout_width="125dp"
+                android:layout_height="125dp"
+                android:layout_margin="10dp"
+                android:layout_gravity="center"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="Marvel" />
+
+            <TextView
+                android:id="@+id/txtName"
+                android:layout_width="180dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="18dp"
+                android:layout_marginTop="1dp"
+                android:layout_marginEnd="28dp"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/imgMarvel"
+                app:layout_constraintTop_toTopOf="parent"
+                android:textColor="@android:color/white"
+                tools:text="Marvel" />
+
+            <TextView
+                android:id="@+id/txtComic"
+                android:layout_width="180dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="18dp"
+                android:layout_marginTop="1dp"
+                android:layout_marginEnd="28dp"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.391"
+                app:layout_constraintStart_toEndOf="@+id/imgMarvel"
+                app:layout_constraintTop_toBottomOf="@+id/txtName"
+                app:layout_constraintVertical_bias="0.115"
+                android:textColor="@android:color/white"
+                tools:text="Comic Description" />
+
+            <ImageButton
+                android:id="@+id/btnSave"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@color/text_buton_datos"
+                android:src="@drawable/favorite_48px"
+                android:scaleType="fitCenter"
+                />
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>
