@@ -1,0 +1,54 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.DispositivosMoviles" parent="Theme.Material3.DayNight">
+        <item name="android:textStyle">bold</item>
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+    </style>
+
+    <style name="Theme.DispositivosMoviles" parent="Base.Theme.DispositivosMoviles">
+        <item name="android:fontFamily">@font/roboto</item>
+        <item name="android:textSize">17sp</item>
+    </style>
+
+    <style name="ejPractico">
+        <item name="android:background">@color/white</item>
+    </style>
+
+    <style name="ejPractico_titulo">
+        <item name="android:textSize">28sp</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="textTitle">
+        <item name="android:textColor">@color/low_gray</item>
+        <item name="android:textSize">40sp</item>
+        <item name="android:fontFamily">@font/satisfy</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="SearchInput">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:background">@color/black</item>
+    </style>
+
+    <style name="ButtonsGeneral">
+        <item name="android:textStyle">italic</item>
+        <item name="android:textSize">22sp</item>
+        <item name="android:backgroundTint">@color/naranja</item>
+        <item name="cornerRadius">8dp</item>
+    </style>
+
+    <style name="ButtonCancel" parent="ButtonsGeneral">
+        <item name="android:backgroundTint">@color/rojo_pasion</item>
+    </style>
+
+    <style name="Binding_Title">
+        <item name="android:textColor">@color/title_binding</item>
+    </style>
+
+    <style name="Active_Indicator" parent="Widget.Material3.BottomNavigationView.ActiveIndicator">
+        <item name="android:color">@color/title_binding</item>
+    </style>
+
+</resources>
