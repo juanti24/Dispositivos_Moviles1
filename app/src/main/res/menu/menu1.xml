@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/home"
+        android:enabled="true"
+        android:icon="@drawable/baseline_home_24"
+        android:title="Inicio"
+        android:visible="true" />
+    <item
+        android:id="@+id/fav"
+        android:enabled="true"
+        android:icon="@drawable/search_24"
+        android:title="Busqueda Marvel"
+        android:visible="true" />
+    <item
+        android:id="@+id/chat_gpt"
+        android:enabled="true"
+        android:icon="@drawable/baseline_chat_24"
+        android:title="Fragment"
+        android:visible="true" />
+</menu>

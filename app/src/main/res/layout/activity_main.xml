@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/Base.Theme.DispositivosMoviles"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#1f2037"
+    tools:context=".ui.activities.MainActivity">
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="40dp"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:text="¿Qué desea ver?"
+        android:textColor="@color/white"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/funcion1"
+        android:layout_width="260dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/borde_boton"
+        android:text="Huella"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <Button
+        android:id="@+id/funcion2"
+        android:layout_width="260dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="@color/azul4"
+        android:background="@drawable/borde_boton"
+        android:text="Cámara"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/funcion1" />
+
+    <Button
+        android:id="@+id/funcion3"
+        android:layout_width="260dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/borde_boton"
+        android:backgroundTint="@color/azul4"
+        android:text="Marvel"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/funcion2" />
+
+    <Button
+        android:id="@+id/funcion4"
+        android:layout_width="260dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/borde_boton"
+        android:backgroundTint="@color/azul4"
+        android:text="Notificación"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/funcion3" />
+
+
+
+    <Button
+        android:id="@+id/funcion6"
+        android:layout_width="260dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="@color/azul4"
+        android:text="Resultados"
+        android:background="@drawable/borde_boton"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/funcion4" />
+
+
+    <Button
+        android:id="@+id/funcion7"
+        android:layout_width="260dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="76dp"
+        android:backgroundTint="@color/rojo_pasion"
+        android:text="Cerrar Aplicacion"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/funcion6" />
+
+    <ImageView
+        android:id="@+id/imageView_raro"
+        android:layout_width="139dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="92dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.893"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/raro_opciones" />
+
+    <ImageView
+        android:id="@+id/imageView_wolven"
+        android:layout_width="139dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="156dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.058"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/wolve_opciones" />
+
+    <ImageView
+        android:id="@+id/imageView_spide_opc"
+        android:layout_width="139dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="224dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.893"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/spide_opciones" />
+
+    <ImageView
+        android:id="@+id/imageView_iron"
+        android:layout_width="139dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="292dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.058"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/iron_opciones" />
+
+    <ImageView
+        android:id="@+id/imageView_thor"
+        android:layout_width="79dp"
+        android:layout_height="76dp"
+        android:layout_marginTop="368dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.807"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/thor_opciones" />
+
+    <ImageView
+        android:id="@+id/imageView_dead"
+        android:layout_width="281dp"
+        android:layout_height="173dp"
+        android:layout_marginTop="392dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.584"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/dead_cerrar" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="331dp"
+        android:layout_height="238dp"
+        android:layout_marginTop="532dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.637"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/fondo_abajo" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
