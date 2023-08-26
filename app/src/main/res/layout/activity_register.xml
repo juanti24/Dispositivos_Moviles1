@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/low_gray"
+    android:layout_height="match_parent"
+    tools:context=".ui.activities.RegisterActivity">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="450px"
+        android:layout_height="450px"
+        android:layout_marginTop="40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logomarvel" />
+
+    <TextView
+        android:id="@+id/textView3"
+        style="@style/ejPractico_titulo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_sides"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="@dimen/margin_sides"
+        android:gravity="center"
+        android:text="Registrarse"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_sides"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="@dimen/margin_sides"
+
+        android:gravity="center"
+        android:text="Registra tu informacion"
+        android:textColor="@color/low_gray"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_sides"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="@dimen/margin_sides"
+        android:text="Correo"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+    <EditText
+        android:id="@+id/txtName"
+        android:layout_width="326dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="@dimen/margin_side_inputs"
+        android:layout_marginEnd="@dimen/margin_side_inputs"
+        android:hint="   example@email.com"
+        android:textStyle="normal"
+        android:textSize="14dp"
+        android:background="@drawable/contorno1"
+
+        android:singleLine="true"
+        android:textColorHint="@color/low_gray"
+        android:textColor="@color/white"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_sides"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="@dimen/margin_sides"
+        android:text="Contraseña"
+        android:textColor="@color/black"
+
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtName" />
+
+    <EditText
+        android:id="@+id/txtPassword"
+        android:layout_width="326dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="@dimen/margin_side_inputs"
+        android:layout_marginEnd="@dimen/margin_side_inputs"
+        android:hint="   Password"
+        android:background="@drawable/contorno1"
+        android:textStyle="normal"
+        android:textSize="14dp"
+        android:inputType="textPassword"
+
+        android:textColorHint="@color/low_gray"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView7" />
+
+    <Button
+        android:id="@+id/btn_register"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="40dp"
+        android:layout_marginTop="40dp"
+        android:backgroundTint="@color/black"
+        android:text="Registrarse"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.487"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtPassword" />
+
+    <ImageView
+        android:id="@+id/imageView_spide_mujer"
+        android:layout_width="450px"
+        android:layout_height="450px"
+        android:layout_marginTop="544dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.066"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/spide_mujer" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
